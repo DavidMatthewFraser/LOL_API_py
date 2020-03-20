@@ -9,11 +9,11 @@ def main():
     APIKey = input()
     #Gets the necessary input to get information from the lol API
     responseFile = requestData(region, summonerName, APIKey)
-    ID = responseFile[summonerName]["ID"]
+    print(responseFile)
     
 def requestData(region, summonerName, APIKey):
     API = "/?api_key="
-    bulkOfURL = ".api.riotgames.com/lol/summoner/v4/summoner/by-name/"
+    bulkOfURL = ".api.riotgames.com/lol/summoner/v4/summoners/by-name/"
     https = "https://"
     URL = https + region + bulkOfURL + summonerName + API + APIKey
     response = requests.get(URL)
