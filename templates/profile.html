@@ -1,0 +1,12 @@
+<!doctype html>
+<head>
+  <title>Hello from Flask</title>
+</head>
+<body>
+  <h2>Summoner Profile Page<h2>
+  {% if name %}
+    <h1>Summoner Name: {{ name }}!</h1>
+  {% else %}
+    <h1>No name passed</h1>
+  {% endif %}
+</body>
