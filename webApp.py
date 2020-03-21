@@ -9,4 +9,6 @@ def hello_world():
 @app.route('/profile')
 @app.route('/profile/<name>')
 def hello(name=None):
-    return render_template('profile.html', name=name)
+    if(name != None):
+        name = name + "'s profile'"
+    return render_template('profile.html', name=name, random="hello")
