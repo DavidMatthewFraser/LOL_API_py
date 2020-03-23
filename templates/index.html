@@ -1,0 +1,12 @@
+
+  <input id="api-key" type='text' placeholder='Enter Your API key'>
+  <input id="user-name" type='text' placeholder='Enter Your League User Name'>
+  <button type='submit' onclick='changepage()'>Submit</button>
+
+<script>
+  function changepage(){
+    key = document.getElementById("api-key").value
+    name = document.getElementById("user-name").value
+    window.location.replace('/profile/' + name + '/' + key);
+  }
+</script>
