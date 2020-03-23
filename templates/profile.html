@@ -5,10 +5,11 @@
 <body>
   <h1>{{random}}<h1>
   <h2>Summoner Profile Page<h2>
-  {% if name %}
-    <h1>Summoner Name: {{ name }}!</h1>
+  {% if sum_name %}
+    <h1>Summoner Name: {{ sum_name }}</h1>
     <h1>Summoner Level: {{ summonerLevel }}</h1>
-    <h1>Summoner Icon: {{ summonerIcon }}</h1>
+    <h1>Profile Icon: {{ profileIcon }}</h1>
+    <img src="{{url_for('static', filename='League_Images/profileIcon/' + profileIcon + '.png')}}">
   {% else %}
     <h1>No name passed</h1>
   {% endif %}
